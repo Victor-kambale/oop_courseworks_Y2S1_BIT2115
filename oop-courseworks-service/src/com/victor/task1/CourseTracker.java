@@ -2,7 +2,7 @@ package com.victor.task1;
 
 /**
  * COURSE CODE: BIT2115 - OOP / JAVA VARIABLE TYPES
- * STUDENT: Kambale Mbakulirahi Victor (ID: 24/2018/BSSE-S)
+ * STUDENT: (ID: 24/2018/BSSE-S)
  * DESCRIPTION: University enrollment tracker showcasing variable scopes.
  */
 public class CourseTracker {
