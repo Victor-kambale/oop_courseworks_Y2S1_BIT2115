@@ -1,4 +1,4 @@
-package com.victor.task2;
+package com.victor.task2.part1;
 
 /**
  * COURSE CODE: BIT2115 - OOP / DATA CONVERSION CONCEPTS
