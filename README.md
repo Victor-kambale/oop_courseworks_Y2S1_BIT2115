@@ -11,7 +11,6 @@
 
 ### 📌 Task 1: Java Variable Scopes Registry
 Demonstrates data layer isolation, memory tracking boundaries, and component lifetimes inside the JVM.
-
 *   **Package Namespace:** `com.victor.task1`
 *   **Core Architecture:** Traces Local (Stack), Instance (Heap), and Static (Metaspace) metrics.
 *   **Validation Verification Graphics:** Located under `images_prouve/Asset-Task1/`
@@ -19,14 +18,14 @@ Demonstrates data layer isolation, memory tracking boundaries, and component lif
 ---
 
 ### 📌 Task 2 - Part 1: Explicit & Implicit Data Conversion Engine
-Implements an automated microfinance bank savings interest calculator. Showcases widening promotions, manual type-casting constraints, and structural rounding loss thresholds.
-
-*   **Package Namespace:** `com.victor.task2`
+Implements an automated microfinance bank savings interest calculator showcasing widening promotions, manual type-casting constraints, and structural rounding loss thresholds.
+*   **Package Namespace:** `com.victor.task2.part1`
 *   **Core Implementation Class File:** `InterestCalculator.java`
+*   **Validation Verification Graphics:** Located under `images_prouve/Asset-Task2-Part1/`
 
-#### 💻 Java Source Solution Code Blueprint
+#### 💻 Java Source Solution Code: `InterestCalculator.java`
 ```java
-package com.victor.task2;
+package com.victor.task2.part1;
 
 /**
  * COURSE CODE: BIT2115 - OOP / DATA CONVERSION CONCEPTS
@@ -70,41 +69,117 @@ public class InterestCalculator {
 
 ---
 
+### 📌 Task 2 - Part 2: Secure Medical Registry (Java Access Modifiers)
+Implements an encapsulated access control system for a private hospital layout. Restricts data visibility between medical staff roles and locks administrative department billing operations.
+*   **Medical Package Namespace:** `com.victor.task2.part2.records`
+*   **Administrative Package Namespace:** `com.victor.task2.part2.admin`
+*   **Validation Verification Graphics:** Located under `images_prouve/Asset-Task2-Part2/`
+
+#### 💻 Java Source Solution Code Blueprints
+
+##### 1. `PatientProfile.java`
+```java
+package com.victor.task2.part2.records;
+
+public class PatientProfile {
+    private String medicalDiagnosis;
+    private String prescribedMedication;
+    public String patientName;
+    public String appointmentDate;
+
+    public PatientProfile(String patientName, String appointmentDate, String medicalDiagnosis, String prescribedMedication) {
+        this.patientName = patientName;
+        this.appointmentDate = appointmentDate;
+        this.medicalDiagnosis = medicalDiagnosis;
+        this.prescribedMedication = prescribedMedication;
+    }
+
+    public String getMedicalDiagnosis() {
+        return this.medicalDiagnosis;
+    }
+
+    public void updatePrescription(String newMedication) {
+        this.prescribedMedication = newMedication;
+    }
+
+    public String getPrescribedMedication() {
+        return this.prescribedMedication;
+    }
+}
+```
+
+##### 2. `FinancialRecord.java`
+```java
+package com.victor.task2.part2.admin;
+import com.victor.task2.part2.records.PatientProfile;
+
+public class FinancialRecord {
+    double hospitalAdmissionFee;
+    double pharmacyTotalCost;
+
+    public FinancialRecord(double hospitalAdmissionFee, double pharmacyTotalCost) {
+        this.hospitalAdmissionFee = hospitalAdmissionFee;
+        this.pharmacyTotalCost = pharmacyTotalCost;
+    }
+
+    void displayDepartmentalBilling() {
+        double totalInvoice = this.hospitalAdmissionFee + this.pharmacyTotalCost;
+        System.out.println(">>> [ADMIN CONFIDENTIAL] Departmental Financial Invoice: UGX " + totalInvoice);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("==================================================");
+        System.out.println("         IUEA PRIVATE HOSPITAL RECORD SYSTEM       ");
+        System.out.println("==================================================\n");
+
+        PatientProfile patient = new PatientProfile("Kavira Asya", "2026-10-05", "Acute Malaria Syndrome", "Artesunate 60mg Injection");
+
+        System.out.println("--------------------------------------------------");
+        System.out.println(">>> [RECEPTIONIST VIEW ACCESSING BASIC DETAILS]");
+        System.out.println("Patient Identity Name: " + patient.patientName);
+        System.out.println("Scheduled Appointment: " + patient.appointmentDate);
+
+        System.out.println("\n--------------------------------------------------");
+        System.out.println(">>> [DOCTOR VIEW ACCESSING SECURE MEDICAL LOGS]");
+        System.out.println("Verified Clinical Diagnosis: " + patient.getMedicalDiagnosis());
+        System.out.println("Active Prescribed Medication: " + patient.getPrescribedMedication());
+        
+        patient.updatePrescription("Coartem 80/480mg Tablets");
+        System.out.println(">>> [CLINICAL UPDATE] New Medication Saved: " + patient.getPrescribedMedication());
+
+        System.out.println("\n--------------------------------------------------");
+        FinancialRecord adminRecord = new FinancialRecord(45000.00, 32000.00);
+        adminRecord.displayDepartmentalBilling();
+        System.out.println("==================================================");
+    }
+}
+```
+
+---
+
 ## 📊 Proof of Implementation (Verification Results)
 
 ### 📁 Task 2 Graphic Validations
 
-#### 1. IDE Project Tree Structure Layout
-*Clean package configuration tracking `InterestCalculator.java` structure alignments:*
-
+#### 1. Task 2 Part 1: IDE Layout & Console Outputs
 ![Project Structure Tree Frame 1](images_prouve/Asset-Task2-Part1/screenshot-tree1task2.jpeg)
 ![Project Structure Tree Frame 2](images_prouve/Asset-Task2-Part1/screenshot-tree2task2.jpeg)
 ![Project Structure Tree Frame 3](images_prouve/Asset-Task2-Part1/screenshot-tree3task2.jpeg)
 ![Project Structure Tree Frame 4](images_prouve/Asset-Task2-Part1/screenshot-tree4task2.jpeg)
+![Console Compilation Result Output Part 1](images_prouve/Asset-Task2-Part1/screenshot-output-task2.jpeg)
 
-#### 2. Successful Execution Console Runtime Output
-*Verified execution console window proving functional data truncation readouts:*
-
-![Console Compilation Result Output](images_prouve/Asset-Task2-Part1/screenshot-output-task2.jpeg)
+#### 2. Task 2 Part 2: IDE Layout & Console Outputs
+![Project Structure Tree Frame 1 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree1task2part2.jpeg)
+![Project Structure Tree Frame 2 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree2task2part2.jpeg)
+![Project Structure Tree Frame 3 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree3task2part2.jpeg)
+![Project Structure Tree Frame 4 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree4task2part2.jpeg)
+![Project Structure Tree Frame 5 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree5task2part2.jpeg)
+![Project Structure Tree Frame 6 Part 2](images_prouve/Asset-Task2-Part2/screenshot-tree6task2part2.jpeg)
+![Console Compilation Result Output Part 2](images_prouve/Asset-Task2-Part2/screenshot-output-task2part2.jpeg)
 
 ---
 
 ## 🛠️ Version Control Audit Trails
 *   **Target Production Environment Branch:** `main`
-*   **Latest Deployment Hash (Commit ID):** `f1280bb`
-*   **Pipeline Operations Tracking Keyword:** `feat: implement task2 data conversion and organize asset directory trees`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*   **Latest Deployment Hash (Commit ID):** `34d0d46`
+*   **Pipeline Operations Tracking Keyword:** `feat: implement task2 part2 access modifiers and upload graphics assets`
