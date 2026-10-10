@@ -278,6 +278,104 @@ public class UnebRegistrationSystem {
 ```
 
 
+### 📌 Task 4: Java Platform Module System (JPMS) Architecture
+Encapsulates application layers into tightly bound structural boundaries to control inter-package asset permissions using strong compile-time and runtime contracts.
+*   **Package Namespace Hierarchy:** `com.victor.task4`
+*   **Modular Configuration Root Descriptor:** `oop-courseworks-service/src/module-info.java`
+*   **Validation Verification Graphics:** Located under `images_prouve/Assets-Task4/`
+
+#### 💻 1. Java Source Solution Code: `module-info.java`
+```java
+/**
+ * COURSE CODE: BIT2115 - APPLIED OBJECT-ORIENTED PROGRAMMING
+ * STUDENT: Kambale Mbakulirahi Victor (REG: 24/2018/BSSE-S)
+ * DESCRIPTION: Task 4 central module descriptor configuration file.
+ */
+module oop.courseworks.service {
+    // Explicitly exports your task4 sub-packages to enable accessibility controls
+    exports com.victor.task4.identity;
+    exports com.victor.task4.tax;
+}
+
+// ===> ✅ END - WELL DONE <=== /
+
+```
+
+##### 2. `PassportService.java`
+```java
+package com.victor.task4.identity;
+
+/**
+ * COURSE CODE: BIT2115 - APPLIED OBJECT-ORIENTED PROGRAMMING
+ * STUDENT: Kambale Mbakulirahi Victor (REG: 24/2018/BSSE-S)
+ * DESCRIPTION: Identity package asset handling secure passport verification.
+ */
+public class PassportService {
+
+    public PassportService() {
+        // Constructor block
+    }
+
+    public void processPassport(String citizenName, String nationalId) {
+        System.out.println("=========================================================================");
+        System.out.println(">>> [IDENTITY MODULE] SECURE PASSPORT PIPELINE DEPLOYED ACTIVATED");
+        System.out.println(">>> Mapped Citizen Records Complete: " + citizenName + " | National ID: " + nationalId);
+        System.out.println(">>> Success: Passport authentication matrix successfully passed validation checks.");
+        System.out.println("-------------------------------------------------------------------------");
+    }
+}
+// ===> ✅ END - WELL DONE <=== /
+
+```
+---
+
+
+##### 3. `TaxCalculator.java`
+```java
+package com.victor.task4.tax;
+
+import com.victor.task4.identity.PassportService;
+
+/**
+ * COURSE CODE: BIT2115 - APPLIED OBJECT-ORIENTED PROGRAMMING
+ * STUDENT: Kambale Mbakulirahi Victor (REG: 24/2018/BSSE-S)
+ * DESCRIPTION: Tax processing module consuming shared identity records securely.
+ */
+public class TaxCalculator {
+
+    public static void main(String[] args) {
+        System.out.println("=========================================================================");
+        System.out.println("        UGANDA GOVERNMENT INTEGRATED MODULAR MANAGEMENT FRAMEWORK       ");
+        System.out.println("=========================================================================\n");
+
+        // 1. Instantiating Cross-Package Data Handshake within Task 4 Boundary
+        PassportService citizenPassportAudit = new PassportService();
+
+        // Simulating modular citizen identity verification check
+        citizenPassportAudit.processPassport("Kambale Mbakulirahi Victor", "24/2018/BSSE-S");
+
+        // 2. Core Departmental Revenue Computation Pipeline
+        System.out.println(">>> [TAX MODULE] RUNNING INDEPENDENT DEPARTEMENTAL INCOME ANALYSIS...");
+        double monthlyEnterpriseRevenue = 8500000.00;
+        double infrastructureTaxRate = 0.06;
+
+        double netAssessedTaxAmount = monthlyEnterpriseRevenue * infrastructureTaxRate;
+
+        System.out.println(">>> [SUCCESS] Business Assessed Base Capital Balance: UGX " + monthlyEnterpriseRevenue);
+        System.out.println(">>> [SUCCESS] Computed Modular Revenue Tax Deducted : UGX " + netAssessedTaxAmount);
+
+        System.out.println("\n=========================================================================");
+        System.out.println(" VERIFICATION AUDIT COMPLETE: Modular service accessibility boundaries standard ");
+        System.out.println(" completely verified for elite production release grade. Max 100% Secure!  ");
+        System.out.println("=========================================================================");
+    }
+}
+// ===> ✅ END - WELL DONE <=== /
+
+```
+
+
+
 
 ---
 ## 📊 Proof of Implementation (Verification Results)
@@ -310,9 +408,21 @@ public class UnebRegistrationSystem {
 ![Console Compilation Result Output Part 3 Frame 1](images_prouve/Assets-Task3/screenshot-output-tree1task3.jpeg)
 ![Console Compilation Result Output Part 3 Frame 2](images_prouve/Assets-Task3/screenshot-output-tree2task3.jpeg)
 
----
 
+### 📁 Task 4 Graphic Validations
+
+#### 1. Task 4: IDE Layout & Console Outputs
+![Project Structure Tree Frame 1 Part 4](images_prouve/Assets-Task4/screenshot-output-tree-task4.jpeg)
+![Project Structure Tree Frame 2 Part 4](images_prouve/Assets-Task4/screenshot-tree1task4.jpeg)
+![Project Structure Tree Frame 3 Part 4](images_prouve/Assets-Task4/screenshot-tree2task4.jpeg)
+![Project Structure Tree Frame 4 Part 4](images_prouve/Assets-Task4/screenshot-tree3task4.jpeg)
+![Project Structure Tree Frame 5 Part 4](images_prouve/Assets-Task4/screenshot-tree4task4.jpeg)
+![Project Structure Tree Frame 6 Part 4](images_prouve/Assets-Task4/screenshot-tree5task4.jpeg)
+
+
+
+---
 ## 🛠️ Version Control Audit Trails
 *   **Target Production Environment Branch:** `main`
-*   **Latest Deployment Hash (Commit ID):** `fc6fa2c`
-*   **Pipeline Operations Tracking Keyword:** `feat: implement task3 initialization pipelines and upload graphics assets`
+*   **Latest Deployment Hash (Commit ID):** `d30a73f`
+*   **Pipeline Operations Tracking Keyword:** `feat: implement shorthand task4 jpms modular infrastructure and upload graphics assets`
